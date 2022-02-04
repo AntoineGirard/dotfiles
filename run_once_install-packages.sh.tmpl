@@ -1,6 +1,7 @@
 {{- if (eq .chezmoi.os "darwin") -}}
 #!/bin/bash
 
+# Install brew dependencies
 brew bundle --no-lock --file=/dev/stdin <<EOF
 # Need a better terminal emulator first
 cask "kitty"
@@ -12,6 +13,7 @@ cask "1password"
 cask "firefox"
 
 # Development tools
+brew "lua" # z dependency
 brew "git"
 cask "jetbrains-toolbox"
 cask "insomnia"
@@ -27,7 +29,13 @@ cask "notion"
 # Music
 cask "spotify"
 
-
-
 EOF
+
+# Clone z.lua (cd command)
+mkdir -p ~/Dev
+if [ ! -d ~/Dev/z.lua ]
+then
+	git clone https://github.com/skywind3000/z.lua.git Dev/z.lua
+fi
+
 {{ end -}}
