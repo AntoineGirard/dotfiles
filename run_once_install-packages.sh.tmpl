@@ -32,6 +32,9 @@ cask "notion"
 # Music
 cask "spotify"
 
+# Magnet (window manager)
+mas "Magnet", id: 441258766
+
 EOF
 
 # Clone z.lua (cd command)
@@ -40,9 +43,5 @@ if [ ! -d ~/Dev/z.lua ]
 then
 	git clone https://github.com/skywind3000/z.lua.git Dev/z.lua
 fi
-
-# Install from Mac App Store
-# Magnet
-mas install 441258766
 
 {{ end -}}
