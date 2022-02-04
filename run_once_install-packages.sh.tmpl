@@ -1,0 +1,33 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+# Need a better terminal emulator first
+cask "kitty"
+
+# Password manager
+cask "1password"
+
+# Browser
+cask "firefox"
+
+# Development tools
+brew "git"
+cask "jetbrains-toolbox"
+cask "insomnia"
+cask "visual-studio-code"
+
+# Communication
+cask "slack"
+cask "telegram"
+
+# Notes
+cask "notion"
+
+# Music
+cask "spotify"
+
+
+
+EOF
+{{ end -}}
