@@ -3,6 +3,9 @@
 
 # Install brew dependencies
 brew bundle --no-lock --file=/dev/stdin <<EOF
+# Mac App Store CLI
+brew "mas"
+
 # Need a better terminal emulator first
 cask "kitty"
 
@@ -37,5 +40,9 @@ if [ ! -d ~/Dev/z.lua ]
 then
 	git clone https://github.com/skywind3000/z.lua.git Dev/z.lua
 fi
+
+# Install from Mac App Store
+# Magnet
+mas install 441258766
 
 {{ end -}}
