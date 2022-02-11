@@ -1,0 +1,12 @@
+[branch]
+         autosetuprebase = always
+[pull]
+         rebase = true
+[user]
+	name = Antoine Girard
+	email = antoine.girard@klaxit.com
+[core]
+	excludesFile = ~/.gitignore
+	hooksPath = ~/gitconfig/hooks
+[alias]
+	l = log --decorate --oneline --graph

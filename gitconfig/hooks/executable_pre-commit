@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+# Look for non-breaking spaces hidden in code, refuse
+# to commit if there are some. This hook depends on the
+# great ripgrep (https://github.com/BurntSushi/ripgrep).
+
+# You can use bash if you prefere it over zsh, and ag
+# over rg.
+
+! rg --colors 'match:bg:yellow' -C 1 ' ' $(git ls-files) && exit 0
+
+cat << TEXT
+⚠️  There is a non breaking space in your code, see notice above.
+   You should  remove it before committing, or you can ignore
+   this using \`git commit --no-verify\`.
+   To replace every non-breaking spaces in your code, you can copy paste
+   this snippet:
+       rg --files-with-matches   ' ' \$(git ls-files) | xargs sed -i '' 's/ / /'
+TEXT
+
+exit 1
