@@ -10,3 +10,5 @@
 	hooksPath = ~/gitconfig/hooks
 [alias]
 	l = log --decorate --oneline --graph
+[help]
+	autocorrect = 20	
