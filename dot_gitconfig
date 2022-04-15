@@ -4,7 +4,7 @@
          rebase = true
 [user]
 	name = Antoine Girard
-	email = antoine.girard@klaxit.com
+	email = antoine@envoituresimone.com
 [core]
 	excludesFile = ~/.gitignore
 	hooksPath = ~/gitconfig/hooks

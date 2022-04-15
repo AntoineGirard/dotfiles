@@ -34,3 +34,13 @@ export NVM_DIR="$HOME/.nvm"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# FFI config
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+
+# Brew x86_64 (for Mac M1)
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+alias axbrew='arch -x86_64 /usr/local/homebrew/bin/brew'
+export HOMEBREW_CELLAR=/usr/local/Cellar
