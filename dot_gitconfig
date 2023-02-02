@@ -12,3 +12,5 @@
 	l = log --decorate --oneline --graph
 [help]
 	autocorrect = 20	
+[push]
+	autoSetupRemote = true
