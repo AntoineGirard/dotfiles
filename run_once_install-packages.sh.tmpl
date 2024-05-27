@@ -7,7 +7,13 @@ brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "mas"
 
 # Need a better terminal emulator first
-cask "kitty"
+cask "iterm2"
+
+# Need a better keyboard layout
+cask "bepo"
+
+# Raycast
+cask "raycast"
 
 # Terminal tools
 brew "ripgrep"
@@ -15,7 +21,6 @@ brew "ripgrep"
 # Password manager
 cask "1password"
 cask "1password-cli"
-brew "lastpass-cli"
 
 # Browser
 cask "firefox"
@@ -23,15 +28,16 @@ cask "firefox"
 # Development tools
 brew "lua" # z dependency
 brew "git"
-brew "gh" # Github CLI
+cask "bruno"
 cask "jetbrains-toolbox"
-cask "insomnia"
 cask "visual-studio-code"
 
 # Communication
 cask "slack"
 cask "telegram"
 cask "protonmail-bridge"
+cask "whatsapp"
+cask "signal"
 
 # Notes
 cask "notion"
