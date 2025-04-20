@@ -10,6 +10,10 @@
 	hooksPath = ~/gitconfig/hooks
 [alias]
 	l = log --decorate --oneline --graph
+	puf = push --force-with-lease
+	ca = commit --amend
+	c = commit
+	cm = commit -m
 [help]
 	autocorrect = 20	
 [push]
