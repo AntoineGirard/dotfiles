@@ -6,6 +6,9 @@
 # You can use bash if you prefere it over zsh, and ag
 # over rg.
 
+# Exit if subcommand return non-zero
+set -e
+
 # Execute project pre-commit hook if exist
 if [ -x ".git/hooks/pre-commit" ]; then
   echo "Executing project-specific pre-commit hook..."
