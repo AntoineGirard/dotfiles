@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Install brew dependencies
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 # Mac App Store CLI
 brew "mas"
 
@@ -48,6 +48,9 @@ cask "notion"
 
 # Music
 cask "spotify"
+
+# Displaylink Driver for baseus hub
+cask "displaylink"
 
 # Magnet (window manager)
 mas "Magnet", id: 441258766
