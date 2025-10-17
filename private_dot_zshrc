@@ -52,3 +52,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # GPG
 export GPG_TTY=$(tty)
+
+alias ber='bundle exec rspec'
